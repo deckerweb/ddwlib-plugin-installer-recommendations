@@ -100,176 +100,148 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		static function recommended_plugins() {
 
 			$core_plugins = array(
-				'tbex' => array(
-					'slug'        => 'toolbar-extras',		// by deckerweb
+				'toolbar-extras' => array(		// by deckerweb	
 					'featured'    => 'yes',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
 				'elementor' => array(
-					'slug'        => 'elementor',
 					'featured'    => 'yes',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
-				'dagb' => array(
-					'slug'        => 'disable-gutenberg',
+				'disable-gutenberg' => array(
 					'featured'    => 'yes',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
-				'ccp' => array(
-					'slug'        => 'kt-tinymce-color-grid',	// central color palette
+				'kt-tinymce-color-grid' => array(		// Central Color Palette
 					'featured'    => 'yes',
 					'recommended' => 'yes',
 					'popular'     => 'no',
 				),
 				'simple-css' => array(
-					'slug'        => 'simple-css',
 					'featured'    => 'yes',
 					'recommended' => 'no',
 					'popular'     => 'no',
 				),
-				'btc' => array(
-					'slug'        => 'builder-template-categories',		// by deckerweb
+				'builder-template-categories' => array(		// by deckerweb		
 					'featured'    => 'yes',
 					'recommended' => 'yes',
 					'popular'     => 'no',
 				),
-				'cs' => array(
-					'slug'        => 'code-snippets',
+				'code-snippets' => array(
 					'featured'    => 'yes',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
-				'czs' => array(
-					'slug'        => 'customizer-search',
+				'customizer-search' => array(
 					'featured'    => 'yes',
 					'recommended' => 'yes',
 					'popular'     => 'no',
 				),
-				'czei' => array(
-					'slug'        => 'customizer-export-import',
+				'customizer-export-import' => array(
 					'featured'    => 'yes',
 					'recommended' => 'yes',
 					'popular'     => 'no',
 				),
-				'dbwfe' => array(
-					'slug'        => 'dashboard-welcome-for-elementor',
+				'dashboard-welcome-for-elementor' => array(
 					'featured'    => 'yes',
 					'recommended' => 'no',
 					'popular'     => 'no',
 				),
-				'llar' => array(
-					'slug'        => 'limit-login-attempts-reloaded',
+				'limit-login-attempts-reloaded' => array(
 					'featured'    => 'yes',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
-				'aopz' => array(
-					'slug'        => 'autoptimize',
-					'featured'    => 'yes',
-					'recommended' => 'yes',
-					'popular'     => 'no',
-				),
-				'spl' => array(
-					'slug'        => 'swift-performance-lite',
+				'autoptimize' => array(
 					'featured'    => 'yes',
 					'recommended' => 'yes',
 					'popular'     => 'no',
 				),
-				'dplpost' => array(
-					'slug'        => 'duplicate-post',
+				'swift-performance-lite' => array(
+					'featured'    => 'yes',
+					'recommended' => 'yes',
+					'popular'     => 'no',
+				),
+				'duplicate-post' => array(
 					'featured'    => 'no',
 					'recommended' => 'no',
 					'popular'     => 'yes',
 				),
-				'pagelt' => array(
-					'slug'        => 'page-links-to',
+				'page-links-to' => array(
 					'featured'    => 'no',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
-				'wgtopt' => array(
-					'slug'        => 'widget-options',
+				'widget-options' => array(
 					'featured'    => 'no',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
-				'wpflite' => array(
-					'slug'        => 'wpforms-lite',
+				'wpforms-lite' => array(
 					'featured'    => 'no',
 					'recommended' => 'no',
 					'popular'     => 'yes',
 				),
-				'clforms' => array(
-					'slug'        => 'caldera-forms',
+				'caldera-forms' => array(
 					'featured'    => 'no',
 					'recommended' => 'no',
 					'popular'     => 'yes',
 				),
-				'frmdbl' => array(
-					'slug'        => 'formidable',
+				'formidable' => array(
 					'featured'    => 'no',
 					'recommended' => 'no',
 					'popular'     => 'yes',
 				),
 				'tablepress' => array(
-					'slug'        => 'tablepress',
 					'featured'    => 'no',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
-				'tseofw' => array(
-					'slug'        => 'autodescription',
+				'autodescription' => array(		// The SEO Framework
 					'featured'    => 'no',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
-				'seopress' => array(
-					'slug'        => 'wp-seopress',
+				'wp-seopress' => array(		// SEOPress
 					'featured'    => 'no',
 					'recommended' => 'no',
 					'popular'     => 'yes',
 				),
-				'logdes' => array(
-					'slug'        => 'login-designer',
+				'login-designer' => array(
 					'featured'    => 'no',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
 				'members' => array(
-					'slug'        => 'members',
 					'featured'    => 'no',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
-				'regentn' => array(
-					'slug'        => 'regenerate-thumbnails',
+				'regenerate-thumbnails' => array(
 					'featured'    => 'no',
 					'recommended' => 'no',
 					'popular'     => 'yes',
 				),
-				'asbee' => array(
+				'antispam-bee' => array(
 					'slug'        => 'antispam-bee',
 					'featured'    => 'no',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
-				'ai1wpm' => array(
-					'slug'        => 'all-in-one-wp-migration',
+				'all-in-one-wp-migration' => array(
 					'featured'    => 'no',
 					'recommended' => 'no',
 					'popular'     => 'yes',
 				),
-				'updplus' => array(
-					'slug'        => 'updraftplus',
+				'updraftplus' => array(
 					'featured'    => 'no',
 					'recommended' => 'yes',
 					'popular'     => 'yes',
 				),
 				'backwpup' => array(
-					'slug'        => 'backwpup',
 					'featured'    => 'no',
 					'recommended' => 'no',
 					'popular'     => 'yes',
@@ -306,14 +278,14 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 			$get_plugins = array();
 
 			/** Loop through plugin data arguments */
-			foreach ( $plugins as $plugin => $plugin_data ) {
+			foreach ( $plugins as $plugin_slug => $plugin_data ) {
 
 				if ( 'yes' === $plugin_data[ sanitize_key( $tab ) ] ) {
 
-					$get_plugins[ $plugin ] = plugins_api(
+					$get_plugins[ $plugin_slug ] = plugins_api(
 						'plugin_information',
 						array(
-							'slug'   => $plugin_data[ 'slug' ],
+							'slug'   => $plugin_slug,
 							'fields' => $fields,
 						)
 					);

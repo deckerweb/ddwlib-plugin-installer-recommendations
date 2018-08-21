@@ -282,10 +282,10 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 
 				if ( 'yes' === $plugin_data[ sanitize_key( $tab ) ] ) {
 
-					$get_plugins[ $plugin_slug ] = plugins_api(
+					$get_plugins[ sanitize_key( $plugin_slug ) ] = plugins_api(
 						'plugin_information',
 						array(
-							'slug'   => $plugin_slug,
+							'slug'   => sanitize_key( $plugin_slug ),
 							'fields' => $fields,
 						)
 					);

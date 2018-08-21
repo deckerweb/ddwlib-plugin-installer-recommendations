@@ -335,18 +335,19 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 			/** Hook in our results */
 			if ( 'featured' === $args->browse ) {
 
-				$result->plugins = DDWlib_Plugin_Installer_Recommendations::get_plugins( 'featured' );	//get_featured_plugins();
+				$result->plugins = DDWlib_Plugin_Installer_Recommendations::get_plugins( 'featured' );
 
 			} elseif ( 'recommended' === $args->browse ) {
 
-				$result->plugins = DDWlib_Plugin_Installer_Recommendations::get_plugins( 'recommended' );	//get_recommended_plugins();
+				$result->plugins = DDWlib_Plugin_Installer_Recommendations::get_plugins( 'recommended' );
 
 			} elseif ( 'popular' === $args->browse ) {
 
-				$result->plugins = DDWlib_Plugin_Installer_Recommendations::get_plugins( 'popular' );	//get_popular_plugins();
+				$result->plugins = DDWlib_Plugin_Installer_Recommendations::get_plugins( 'popular' );
 
 			}  // end if
 
+			/** Finally, render the result of the Plugins API request */
 			return $result;
 
 		}  // end method

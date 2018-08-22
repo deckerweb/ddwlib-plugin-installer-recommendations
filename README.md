@@ -19,14 +19,14 @@ Any contribution is welcome, especially code-wise. Please contact me - open an I
 
 ## License?
 
-The library is licensed under GPLv2 or higher like WordPress itself.
+The library is licensed under GPLv2 or later like WordPress itself.
 
 
 ## Author/ Developer?
 
-David Decker from Chemnitz, Germany
-https://deckerweb.de/
-https://toolbarextras.com/
+* David Decker from Chemnitz, Germany
+* https://deckerweb.de/
+* https://toolbarextras.com/
 
 
 ## Copyright

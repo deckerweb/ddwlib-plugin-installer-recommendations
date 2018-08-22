@@ -60,7 +60,8 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 			add_filter(
 				'plugins_api_result',
 				array( 'DDWlib_Plugin_Installer_Recommendations', 'plugins_api_result' ),
-				11, 3
+				11,
+				3
 			);
 
 		}  // end method

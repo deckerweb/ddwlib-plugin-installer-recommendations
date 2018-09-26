@@ -2,6 +2,13 @@
 
 ## Changelog
 
+### 1.1.0 - 2018-09-27
+
+* New: Re-added the original  but hidden "Newest" tab to the Plugin Installer toolbar
+* New: Add the plugin's version number to each plugin card result
+* New: For both newly introduced text label strings added a filter to make the strings translatable via any plugin that uses the library
+
+
 ### 1.0.0 - 2018-08-22
 
 * *Official public release on GitHub.com public repo*

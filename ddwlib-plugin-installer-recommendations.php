@@ -21,7 +21,7 @@
  * @package DDWlib Plugin Installer Recommendations
  * @author  David Decker
  * @license http://www.gnu.org/licenses GNU General Public License
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 /**
@@ -42,6 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *         plugin.
  *
  * @since 1.0.0
+ * @since 1.1.0 Added back "Newest" tab; plus version number to plugin cards.
  */
 if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 
@@ -54,9 +55,27 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		 * Constructor. Hooks all interactions into correct areas to start the class.
 		 *
 		 * @since 1.0.0
+		 * @since 1.1.0 Added two more filter functions.
 		 */
 		public function __construct() {
 
+			/** Re-add hidden "Newest" tab */
+			add_filter(
+				'install_plugins_tabs',
+				array( 'DDWlib_Plugin_Installer_Recommendations', 'plugin_installer_tweak_tabs' ),
+				5,
+				1
+			);
+
+			/** Add version number to plugin cards */
+			add_filter(
+				'plugin_install_action_links',
+				array( 'DDWlib_Plugin_Installer_Recommendations', 'plugin_install_action_links' ),
+				10,
+				2
+			);
+
+			/** Filter Plugins API results (the main purpose!) */
 			add_filter(
 				'plugins_api_result',
 				array( 'DDWlib_Plugin_Installer_Recommendations', 'plugins_api_result' ),
@@ -350,6 +369,89 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 
 			/** Finally, render the result of the Plugins API request */
 			return $result;
+
+		}  // end method
+
+
+		/**
+		 * Set needed default strings, make them filterable for plugins.
+		 *
+		 * @since  1.1.0
+		 *
+		 * @return array Filterable array of strings.
+		 */
+		static function get_strings() {
+
+			return apply_filters(
+				'ddwlib_plir/filter/strings/plugin_installer',
+				array(
+					'newest'  => 'Newest',
+					'version' => 'Version',
+				)
+			);
+
+		}  // end method
+
+
+		/**
+		 * Plugin installer: re-add (originally) hidden tab "Newest" back to the
+		 *   stack.
+		 *   Note: The render function for the tab is still part of WordPress
+		 *         Core!
+		 *
+		 * @since  1.1.0
+		 *
+		 * @param  array $tabs Array of plugin installer tabs.
+		 * @return array Tweaked array of tabs for plugin installer toolbar.
+		 */
+		static function plugin_installer_tweak_tabs( $tabs ) {
+
+			/** Bail early if plugin "Cleaner Plugin Installer" is active */
+			if ( defined( 'CLPINST_PLUGIN_VERSION' ) ) {
+				return $tabs;
+			}
+
+			/** Get array of label strings */
+			$labels = DDWlib_Plugin_Installer_Recommendations::get_strings();
+
+			/** Re-enable hidden tab from core */
+			$tabs[ 'new' ] = esc_attr( $labels[ 'newest' ] );
+
+			/** Return tweaked tabs array */
+			return $tabs;
+
+		}  // end method
+
+
+		/**
+		 * Add plugin version to plugin card overview.
+		 *
+		 * @since  1.1.0
+		 *
+		 * @param  array $action_links Collected action links in plugin card.
+		 * @param  array $plugin       Values from Plugins API for each plugin.
+		 * @return array $action_links Array of tweaked action links in plugin
+		 *                             card.
+		 */
+		static function plugin_install_action_links( $action_links, $plugin ) {
+
+			/** Bail early if plugin "Cleaner Plugin Installer" is active */
+			if ( defined( 'CLPINST_PLUGIN_VERSION' ) ) {
+				return;
+			}
+
+			/** Get array of label strings */
+			$labels = DDWlib_Plugin_Installer_Recommendations::get_strings();
+
+			/** Add to the action links */
+			$action_links[] = sprintf(
+				'<div><small>%s %s</small></div>',
+				esc_attr( $labels[ 'version' ] ),
+				wp_kses_data( $plugin[ 'version' ] )
+			);
+
+			/** Render output */
+			return $action_links;
 
 		}  // end method
 

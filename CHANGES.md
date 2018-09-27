@@ -9,6 +9,7 @@
 * New: For both newly introduced text label strings added a filter to make the strings translatable via any plugin that uses the library
 * New: Add style tweaks to plugin cards display when hovering over a plugin card (to make it more stand out)
 * New: Add style tweaks to the Plugin ZIP Uploader and the Theme ZIP Uploader areas to make it more user friendly (bigger areas, could be used as drop-zones!)
+* New: Add plugin IconPress Lite to the default selection of plugins (SVG based; integrates with WordPress, Gutenberg, Elementor, Beaver Builder already)
 * New: Added [Wiki page](https://github.com/deckerweb/ddwlib-plugin-installer-recommendations/wiki) on library's GitHub.com page to assist with information and code snippets
 
 

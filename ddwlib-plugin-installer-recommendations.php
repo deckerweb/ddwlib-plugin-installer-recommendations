@@ -164,6 +164,11 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 					'recommended' => 'yes',
 					'popular'     => 'no',
 				),
+				'iconpress-lite' => array(
+					'featured'    => 'yes',
+					'recommended' => 'yes',
+					'popular'     => 'no',
+				),
 				'code-snippets' => array(
 					'featured'    => 'yes',
 					'recommended' => 'yes',

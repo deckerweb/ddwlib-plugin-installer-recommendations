@@ -12,6 +12,11 @@ By default the WordPress plugin installer displays always the same results on th
 That is the reason I built it because I wanted that for all my plugins to give the user more relevant results - for the target user group of my plugins. At the same time I wanted to use the default WordPress installer - which the users are used to.
 
 
+## Customization/ Code Snippets?
+
+See the [**extra Wiki page** for code snippets](https://github.com/deckerweb/ddwlib-plugin-installer-recommendations/wiki/Customizations:-Code-Snippets).
+
+
 ## Contributions?
 
 Any contribution is welcome, especially code-wise. Please contact me - open an Issue and/ or a Pull request here in the repo.

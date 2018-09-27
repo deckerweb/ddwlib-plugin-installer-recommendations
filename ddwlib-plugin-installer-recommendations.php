@@ -472,7 +472,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 
 		/**
 		 * Add (CSS inline) style tweaks to the following areas:
-		 *   - Plugin cards (plugin installer)
+		 *   - Plugin cards (plugin installer results)
 		 *   - Plugin uploader
 		 *   - Theme uploader
 		 *
@@ -481,7 +481,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		static function installer_styles() {
 
 			/** Bail early if no styles wanted */
-			if ( apply_filters( 'ddwlib_plir/filter/installer_styles', FALSE ) ) {
+			if ( apply_filters( 'ddwlib_plir/filter/remove_installer_styles', FALSE ) ) {
 				return;
 			}
 
@@ -520,8 +520,13 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 					    background-color: #ffffe8;
 					    border: 4px dashed #b4b9be;
 					    display: inline-block;
+					    font-size: 135%;
 					    padding: 20px;
 					    width: 100% !important;
+					}
+					input#pluginzip:hover,
+					input#themezip:hover {
+					    background-color: #ffffd9;
 					}
 					input#install-plugin-submit,
 					input#install-theme-submit {

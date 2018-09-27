@@ -4,9 +4,12 @@
 
 ### 1.1.0 - 2018-09-27
 
-* New: Re-added the original  but hidden "Newest" tab to the Plugin Installer toolbar
+* New: Re-added the original but hidden "Newest" tab to the Plugin Installer toolbar
 * New: Add the plugin's version number to each plugin card result
 * New: For both newly introduced text label strings added a filter to make the strings translatable via any plugin that uses the library
+* New: Add style tweaks to plugin cards display when hovering over a plugin card (to make it more stand out)
+* New: Add style tweaks to the Plugin ZIP Uploader and the Theme ZIP Uploader areas to make it more user friendly (bigger areas, could be used as drop-zones!)
+* New: Added [Wiki page](https://github.com/deckerweb/ddwlib-plugin-installer-recommendations/wiki) on library's GitHub.com page to assist with information and code snippets
 
 
 ### 1.0.0 - 2018-08-22

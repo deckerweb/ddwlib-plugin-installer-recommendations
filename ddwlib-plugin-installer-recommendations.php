@@ -22,6 +22,7 @@
  * @author  David Decker
  * @license http://www.gnu.org/licenses GNU General Public License
  * @version 1.1.0
+ * @link    https://github.com/deckerweb/ddwlib-plugin-installer-recommendations
  */
 
 /**
@@ -42,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *         plugin.
  *
  * @since 1.0.0
- * @since 1.1.0 Added back "Newest" tab; plus version number to plugin cards.
+ * @since 1.1.0 Added "Newest" tab; version number to plugin cards; CSS styles.
  */
 if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 
@@ -55,7 +56,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		 * Constructor. Hooks all interactions into correct areas to start the class.
 		 *
 		 * @since 1.0.0
-		 * @since 1.1.0 Added two more filter functions.
+		 * @since 1.1.0 Added two more filter functions, plus two more actions.
 		 */
 		public function __construct() {
 
@@ -81,6 +82,19 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 				array( 'DDWlib_Plugin_Installer_Recommendations', 'plugins_api_result' ),
 				11,
 				3
+			);
+
+			/** Style tweaks for Plugin & Theme Installer */
+			add_action(
+				'admin_head-plugin-install.php',
+				array( 'DDWlib_Plugin_Installer_Recommendations', 'installer_styles' ),
+				15
+			);
+
+			add_action(
+				'admin_head-theme-install.php',
+				array( 'DDWlib_Plugin_Installer_Recommendations', 'installer_styles' ),
+				15
 			);
 
 		}  // end method
@@ -452,6 +466,71 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 
 			/** Render output */
 			return $action_links;
+
+		}  // end method
+
+
+		/**
+		 * Add (CSS inline) style tweaks to the following areas:
+		 *   - Plugin cards (plugin installer)
+		 *   - Plugin uploader
+		 *   - Theme uploader
+		 *
+		 * @since 1.1.0
+		 */
+		static function installer_styles() {
+
+			/** Bail early if no styles wanted */
+			if ( apply_filters( 'ddwlib_plir/filter/installer_styles', FALSE ) ) {
+				return;
+			}
+
+			/** Add CSS inline styles */
+			?>
+				<style type="text/css">
+					/** Plugin cards */
+					.plugin-card:hover {
+						background: #ffffd9;
+						border: 1px solid #bbb;
+					}
+					.plugin-card-bottom {
+						background: #f2f2f2;
+					}
+					.plugin-card:hover > .plugin-card-bottom {
+						background: #e1e1e1;
+					}
+					.plugin-install-php .tablenav .tablenav-pages {
+						margin-top: 15px;
+						margin-bottom: 15px;
+					}
+					.plugin-action-buttons div small {
+						margin-left: 10px;
+					}
+
+					/** Plugin & Theme uploaders */
+					.upload-plugin .wp-upload-form,
+					.upload-theme .wp-upload-form {
+    					padding: 20px;
+    					margin: 20px auto;
+    					max-width: 80%;
+    					text-align: center;
+					}
+					input#pluginzip,
+					input#themezip {
+					    background-color: #ffffe8;
+					    border: 4px dashed #b4b9be;
+					    display: inline-block;
+					    padding: 20px;
+					    width: 100% !important;
+					}
+					input#install-plugin-submit,
+					input#install-theme-submit {
+						display: inline-block;
+						font-size: 120%;
+						margin-top: 20px;
+					}
+				</style>
+			<?php
 
 		}  // end method
 

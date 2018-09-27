@@ -29,6 +29,11 @@ The library is licensed under GPLv2 or later like WordPress itself.
 * https://toolbarextras.com/
 
 
+## Changelog - Version History:
+
+--> See plugin file [CHANGES.md here](https://github.com/deckerweb/ddwlib-plugin-installer-recommendations/blob/master/CHANGES.md)
+
+
 ## Copyright
 
 (c) 2018 by David Decker - DECKERWEB

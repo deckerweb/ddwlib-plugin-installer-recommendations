@@ -2,6 +2,12 @@
 
 ## Changelog
 
+### 1.2.0 - 2018-10-30
+
+* New: Support for plugin "Dark Mode"
+* Tweak: Enhanced CSS styling for plugin cards
+
+
 ### 1.1.0 - 2018-09-27
 
 * New: Re-added the original but hidden "Newest" tab to the Plugin Installer toolbar

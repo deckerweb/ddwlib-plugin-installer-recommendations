@@ -4,7 +4,7 @@
   "keywords": ["wordpress", "plugins", "plugin", "installer", "api", "recommendations", "deckerweb"],
   "type": "library",
   "homepage": "https://github.com/deckerweb/ddwlib-plugin-installer-recommendations",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "David Decker",

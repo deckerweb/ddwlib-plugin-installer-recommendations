@@ -2,6 +2,12 @@
 
 ## Changelog
 
+### 1.2.1 - 2018-11-20
+
+* Tweak: Small code tweaks in class
+* Fix: CSS syntax error
+
+
 ### 1.2.0 - 2018-10-30
 
 * New: Support for plugin "Dark Mode"

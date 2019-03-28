@@ -2,6 +2,15 @@
 
 ## Changelog
 
+### 1.3.0 - 2019-03-28
+
+* New: Add "deckerweb Plugins" tab on plugin installer page
+* New: Properly enqueue CSS styles as files, no longer inline styles
+* New: Added more strings to the labels array
+* New: Organized as more than 1 file now, therefore now packaged as a folder
+* Fix: CSS styles for "Activate Now" button
+
+
 ### 1.2.1 - 2018-11-20
 
 * Tweak: Small code tweaks in class

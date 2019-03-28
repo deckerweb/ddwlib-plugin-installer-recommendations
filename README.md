@@ -32,6 +32,7 @@ The library is licensed under GPLv2 or later like WordPress itself.
 * David Decker from Chemnitz, Germany
 * https://deckerweb.de/
 * https://toolbarextras.com/
+* https://deckerweb-plugins.com/
 
 
 ## Changelog - Version History:
@@ -41,4 +42,4 @@ The library is licensed under GPLv2 or later like WordPress itself.
 
 ## Copyright
 
-(c) 2018 by David Decker - DECKERWEB
+(c) 2018-2019 by David Decker - DECKERWEB

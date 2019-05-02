@@ -2,7 +2,13 @@
 
 ## Changelog
 
-### 1.3.0 - 2019-03-28
+### 🎉 1.4.0 - 2019-05-02
+
+* New: Add "deckerweb" view on Plugins page
+* Tweak: Few minor enhancements
+
+
+### 🎉 1.3.0 - 2019-03-28
 
 * New: Add "deckerweb Plugins" tab on plugin installer page
 * New: Properly enqueue CSS styles as files, no longer inline styles
@@ -11,19 +17,19 @@
 * Fix: CSS styles for "Activate Now" button
 
 
-### 1.2.1 - 2018-11-20
+### ⚡ 1.2.1 - 2018-11-20
 
 * Tweak: Small code tweaks in class
 * Fix: CSS syntax error
 
 
-### 1.2.0 - 2018-10-30
+### 🎉 1.2.0 - 2018-10-30
 
 * New: Support for plugin "Dark Mode"
 * Tweak: Enhanced CSS styling for plugin cards
 
 
-### 1.1.0 - 2018-09-27
+### 🎉 1.1.0 - 2018-09-27
 
 * New: Re-added the original but hidden "Newest" tab to the Plugin Installer toolbar
 * New: Add the plugin's version number to each plugin card result
@@ -34,7 +40,7 @@
 * New: Added [Wiki page](https://github.com/deckerweb/ddwlib-plugin-installer-recommendations/wiki) on library's GitHub.com page to assist with information and code snippets
 
 
-### 1.0.0 - 2018-08-22
+### 🎉 1.0.0 - 2018-08-22
 
 * *Official public release on GitHub.com public repo*
 * New: Added Readme
@@ -43,6 +49,6 @@
 * New: Properly licensed under GPLv2 or later (like WordPress itself)
 
 
-### 0.9.0 - 2018-08-21
+### 🎉 0.9.0 - 2018-08-21
 
 * Initial beta release of the library on GitHub.com private repo

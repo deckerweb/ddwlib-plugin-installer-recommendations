@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### ⚡ 1.4.1 - 2019-05-16
+
+* Tweak: Better compatibility with ClassicPress
+
+
 ### 🎉 1.4.0 - 2019-05-02
 
 * New: Add "deckerweb" view on Plugins page

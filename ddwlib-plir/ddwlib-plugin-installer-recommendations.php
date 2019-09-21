@@ -21,7 +21,7 @@
  * @package DDWlib Plugin Installer Recommendations
  * @author  David Decker
  * @license http://www.gnu.org/licenses GNU General Public License
- * @version 1.4.1
+ * @version 1.4.2
  * @link    https://github.com/deckerweb/ddwlib-plugin-installer-recommendations
  */
 
@@ -59,7 +59,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		 *
 		 * @since 1.3.0
 		 */
-		private static $version = '1.4.0';
+		private static $version = '1.4.2';
 
 
 		/**
@@ -473,7 +473,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 
 			/** Bail early if plugin "Cleaner Plugin Installer" is active */
 			if ( defined( 'CLPINST_PLUGIN_VERSION' ) ) {
-				return;
+				return $action_links;
 			}
 
 			/** Get array of label strings */
@@ -678,7 +678,7 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 
 			global $plugins;
 
-			if ( is_array( $plugins ) ) {
+			if ( is_array( $plugins ) && isset( $plugins[ 'all' ] ) ) {
 
 				foreach ( $plugins[ 'all' ] as $plugin_slug => $plugin_data ) {
 

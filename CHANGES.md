@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### ⚡ 1.4.2 - 2019-09-03
+
+* Fix: Improved check for plugin status, to remove notice
+
+
 ### ⚡ 1.4.1 - 2019-05-16
 
 * Tweak: Better compatibility with ClassicPress

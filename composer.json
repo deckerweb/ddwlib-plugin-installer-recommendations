@@ -1,7 +1,7 @@
 {
   "name": "deckerweb/ddwlib-plugin-installer-recommendations",
   "description": "Class to tweak the results of the WordPress Plugins API with custom plugin recommendations.",
-  "keywords": ["wordpress", "plugins", "plugin", "installer", "api", "recommendations", "deckerweb"],
+  "keywords": ["wordpress", "plugins", "plugin", "installer", "api", "recommendations", "tips", "deckerweb"],
   "type": "library",
   "homepage": "https://github.com/deckerweb/ddwlib-plugin-installer-recommendations",
   "license": "GPL-2.0-or-later",
@@ -17,6 +17,6 @@
     "source": "https://github.com/deckerweb/ddwlib-plugin-installer-recommendations"
   },
   "require": {
-    "php": ">=5.6"
+    "php": ">=5.6.20"
   }
 }

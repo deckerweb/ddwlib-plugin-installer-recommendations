@@ -2,6 +2,12 @@
 
 ## Changelog
 
+### 🎉 1.5.0 - 2019-09-22
+
+* New: Save plugin installer API results in transients, to speed up 🚀 performance -- expiration time of transient is 1 week by default, can be tweaked via filter: `ddwlib_plir/filter/transient_expiration`
+* New: Sort results of "deckerweb Plugins" tab by number of active installs - but put "Toolbar Extras" always on first position 😎
+
+
 ### ⚡ 1.4.2 - 2019-09-03
 
 * Fix: Improved check for plugin status, to remove notice

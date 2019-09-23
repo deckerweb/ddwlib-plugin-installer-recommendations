@@ -658,9 +658,9 @@ if ( ! class_exists( 'DDWlib_Plugin_Installer_Recommendations' ) ) :
 		 *
 		 * @param array|object $a First plugin info to compare.
 		 * @param array|object $b Second plugin info to compare.
-		 * @return array|object Resorted array of results.
+		 * @return array|object|null|int Resorted array of results.
 		 */
-		static function install_plugins_ddwplugins_sort_callback() {
+		static function install_plugins_ddwplugins_sort_callback( $a, $b ) {
 
 			$a = (array) $a;
 			$b = (array) $b;
